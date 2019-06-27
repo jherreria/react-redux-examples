@@ -12,6 +12,14 @@ function App() {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
+          <p>Todo List App from <a
+          className="App-link"
+          href='https://youtu.be/93p3LxR9xfM'
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Redux Crash Curse with React
+        </a></p>
         </header>
         <Postform />
         <hr />

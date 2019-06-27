@@ -1,6 +1,4 @@
 import { FETCH_POSTS, NEW_POST } from "../actions/types";
-import { arrowFunctionExpression } from "@babel/types";
-import { STATUS_CODES } from "http";
 
 const initialState = {
   items: [],
@@ -14,6 +12,12 @@ export default function(state  = initialState, action){
         ...state,
         items: action.payload 
       }
+    case NEW_POST:
+        return{
+          ...state,
+          item: action.payload 
+        }
+
     default:
       return state;
   }
