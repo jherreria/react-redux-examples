@@ -1,0 +1,20 @@
+import { FETCH_POSTS, NEW_POST } from "../actions/types";
+import { arrowFunctionExpression } from "@babel/types";
+import { STATUS_CODES } from "http";
+
+const initialState = {
+  items: [],
+  item: {}
+};
+
+export default function(state  = initialState, action){
+  switch(action.type){
+    case FETCH_POSTS:
+      return{
+        ...state,
+        items: action.payload 
+      }
+    default:
+      return state;
+  }
+}
